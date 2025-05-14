@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Your Pizza - Pizzatopia</title>
+    <link rel="stylesheet" href="global-style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Order Your Pizza</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="order.html" class="active">Order</a></li>
+                <li><a href="restaurant.html">Restaurant Location</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+        <p>Fresh, hot, and delivered to your door!</p>
+    </header>
+
+    <main>
+        <section class="order-section">
+            <h2>Select Your Pizza</h2>
+            <p>Choose from our delicious range of pizzas and place your order online.</p>
+            
+            <form id="orderForm" class="order-form">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="address">Delivery Address:</label>
+                <textarea id="address" name="address" rows="3" required></textarea>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="pizza">Choose Pizza:</label>
+                <select id="pizza" name="pizza" required>
+                    <option value="pepperoni">Pepperoni Pizza - 100</option>
+                    <option value="bbq">BBQ Pizza - 100</option>
+                    <option value="cheesy">Cheesy Bacon Pizza - 100</option>
+                </select>
+                
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                
+                <button type="submit" class="order-button">Place Order</button>
+            </form>
+
+            <p id="successMessage" class="success-message" style="display: none;">🎉 Order Successful! Your pizza is on the way. 🍕</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Pizzatopia. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("orderForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            document.getElementById("successMessage").style.display = "block"; 
+            document.getElementById("orderForm").reset(); 
+        });
+    </script>
+
+</body>
+</html>
+

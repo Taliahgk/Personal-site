@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback - Pizzatopia</title>
+  <link rel="stylesheet" href="global-style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>We Value Your Feedback!</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="restaurant.html">Restaurant</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="feedback.html" class=>Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Tell Us What You Think</h2>
+    <p>Your thoughts help us grow and serve you better.</p>
+
+    <form action="#" method="post">
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="rating">How would you rate us?</label>
+      <select id="rating" name="rating" required>
+        <option value="">Choose one</option>
+        <option value="excellent">Excellent</option>
+        <option value="good">Good</option>
+        <option value="average">Average</option>
+        <option value="poor">Poor</option>
+      </select>
+
+      <label for="comments">Comments:</label>
+      <textarea id="comments" name="comments" rows="5" placeholder="Write your feedback here..."></textarea>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Pizzatopia. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
